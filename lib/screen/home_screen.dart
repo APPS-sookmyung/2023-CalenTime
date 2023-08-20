@@ -1,5 +1,6 @@
-import 'package:calentime/component/main_calendar.dart';
+// import 'package:calentime/component/main_calendar.dart';
 import 'package:flutter/material.dart';
+import '../component/main_calendar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea( // 시스템 UI 피해서 구현
+      body: SafeArea(
+        // 시스템 UI 피해서 구현
         child: Column(
           children: [
             MainCalendar(
@@ -31,8 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void onDaySelected(DateTime selectedDate, DateTime focusedDate){
-
+  void onDaySelected(DateTime selectedDate, DateTime focusedDate) {
     setState(() {
       this.selectedDate = selectedDate;
     });
